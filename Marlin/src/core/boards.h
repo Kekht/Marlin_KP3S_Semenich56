@@ -391,6 +391,7 @@
 #define BOARD_PANDA_PI_V29            5066  // Panda Pi V2.9 - Standalone (STM32F103RC)
 #define BOARD_SOVOL_V131              5067  // Sovol V1.3.1 (GD32F103RET6)
 #define BOARD_TRIGORILLA_V006         5068  // Trigorilla V0.0.6 (GD32F103RE)
+#define BOARD_MKS_ROBIN_NANO_UART_MOD 5999  // MKS Robin Nano (STM32F103VE) with UART pins soldered
 
 //
 // ARM Cortex-M4F
