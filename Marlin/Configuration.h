@@ -1232,7 +1232,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 802 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 401 }
 
 /**
  * Default Max Feed Rate (linear=mm/s, rotational=°/s)
@@ -2003,7 +2003,7 @@
 /**
  * Auto-leveling needs preheating
  */
-#define PREHEAT_BEFORE_LEVELING
+//#define PREHEAT_BEFORE_LEVELING
 #if ENABLED(PREHEAT_BEFORE_LEVELING)
   #define LEVELING_NOZZLE_TEMP 180   // (°C) Only applies to E0 at this time
   #define LEVELING_BED_TEMP     80
