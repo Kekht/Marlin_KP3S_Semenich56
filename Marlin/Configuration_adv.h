@@ -1382,7 +1382,7 @@
 //#define MICROSTEP32 HIGH,LOW,HIGH
 
 // Microstep settings (Requires a board with pins named X_MS1, X_MS2, etc.)
-#define MICROSTEP_MODES { 16, 16, 16, 16, 16, 16 } // [1,2,4,8,16]
+//#define MICROSTEP_MODES { 16, 16, 16, 16, 16, 16 } // [1,2,4,8,16]
 
 /**
  *  @section  stepper motor current
@@ -3003,11 +3003,11 @@
   #endif
 
   #if AXIS_IS_TMC_CONFIG(E0)
-    #define E0_CURRENT      700
-    #define E0_MICROSTEPS    16
-    #define E0_RSENSE         0.11
+    #define E0_CURRENT       700
+    #define E0_MICROSTEPS    32
+    #define E0_RSENSE        0.11
     #define E0_CHAIN_POS     -1
-    //#define E0_INTERPOLATE true
+    //#define E0_INTERPOLATE   false
     //#define E0_HOLD_MULTIPLIER 0.5
   #endif
 
