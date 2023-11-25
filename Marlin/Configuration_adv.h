@@ -917,7 +917,7 @@
 // #define SENSORLESS_BACKOFF_MM  { 2, 2, 0 }  // (linear=mm, rotational=°) Backoff from endstops before sensorless homing
 
 #define HOMING_BUMP_MM      { 5, 5, 2  }       // (linear=mm, rotational=°) Backoff from endstops after first bump значения смещения, на которые требуется отступить после срабатывания концевиков.
-#define HOMING_BUMP_DIVISOR { 6, 6, 4 }       // Re-Bump Speed Divisor (Divides the Homing Feedrate)         //Задаем делители скоростей (HOMING_FEEDRATE) для хоум,с этой скоростью, кратной делителям, осуществляться повторное движение к концевикам.
+#define HOMING_BUMP_DIVISOR { 6, 6, 2 }       // Re-Bump Speed Divisor (Divides the Homing Feedrate)         //Задаем делители скоростей (HOMING_FEEDRATE) для хоум,с этой скоростью, кратной делителям, осуществляться повторное движение к концевикам.
 
 //#define HOMING_BACKOFF_POST_MM { 1, 1, 5 }  // (linear=mm, rotational=°) Backoff from endstops after homing ----------------
 //#define XY_COUNTERPART_BACKOFF_MM 0         // (mm) Backoff X after homing Y, and vice-versa
