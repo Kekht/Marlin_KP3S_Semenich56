@@ -2236,7 +2236,7 @@
 #endif
 
 // Homing speeds (linear=mm/min, rotational=°/min)
-#define HOMING_FEEDRATE_MM_M { (30*60), (30*60), (5*60) }
+#define HOMING_FEEDRATE_MM_M { (70*60), (70*60), (5*60) }
 
 // Validate that endstops are triggered on homing moves
 #define VALIDATE_HOMING_ENDSTOPS
@@ -2352,17 +2352,29 @@
 //
 // Preheat Constants - Up to 10 are supported without changes
 //
-#define PREHEAT_1_LABEL "PETG"
-#define PREHEAT_1_TEMP_HOTEND 230
-#define PREHEAT_1_TEMP_BED 75
-#define PREHEAT_1_TEMP_CHAMBER 35
+#define PREHEAT_1_LABEL "PLA"
+#define PREHEAT_1_TEMP_HOTEND 210
+#define PREHEAT_1_TEMP_BED 60
+#define PREHEAT_1_TEMP_CHAMBER 0
 #define PREHEAT_1_FAN_SPEED 0 // Value from 0 to 255
 
-#define PREHEAT_2_LABEL "ABS"
-#define PREHEAT_2_TEMP_HOTEND 250
-#define PREHEAT_2_TEMP_BED 95
-#define PREHEAT_2_TEMP_CHAMBER 35
+#define PREHEAT_2_LABEL "PETG"
+#define PREHEAT_2_TEMP_HOTEND 230
+#define PREHEAT_2_TEMP_BED 80
+#define PREHEAT_2_TEMP_CHAMBER 0
 #define PREHEAT_2_FAN_SPEED 0 // Value from 0 to 255
+
+#define PREHEAT_3_LABEL "ABS"
+#define PREHEAT_3_TEMP_HOTEND 260
+#define PREHEAT_3_TEMP_BED 100
+#define PREHEAT_3_TEMP_CHAMBER 35
+#define PREHEAT_3_FAN_SPEED 0 // Value from 0 to 255
+
+#define PREHEAT_4_LABEL "PA"
+#define PREHEAT_4_TEMP_HOTEND 290
+#define PREHEAT_4_TEMP_BED 120
+#define PREHEAT_4_TEMP_CHAMBER 55
+#define PREHEAT_4_FAN_SPEED 0 // Value from 0 to 255
 
 // @section motion
 
