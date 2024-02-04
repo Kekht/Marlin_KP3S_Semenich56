@@ -916,7 +916,7 @@
 
 // #define SENSORLESS_BACKOFF_MM  { 2, 2, 0 }  // (linear=mm, rotational=°) Backoff from endstops before sensorless homing
 
-#define HOMING_BUMP_MM      { 5, 5, 2  }       // (linear=mm, rotational=°) Backoff from endstops after first bump значения смещения, на которые требуется отступить после срабатывания концевиков.
+#define HOMING_BUMP_MM      { 5, 5, 2 }       // (linear=mm, rotational=°) Backoff from endstops after first bump значения смещения, на которые требуется отступить после срабатывания концевиков.
 #define HOMING_BUMP_DIVISOR { 6, 6, 2 }       // Re-Bump Speed Divisor (Divides the Homing Feedrate)         //Задаем делители скоростей (HOMING_FEEDRATE) для хоум,с этой скоростью, кратной делителям, осуществляться повторное движение к концевикам.
 
 //#define HOMING_BACKOFF_POST_MM { 1, 1, 5 }  // (linear=mm, rotational=°) Backoff from endstops after homing ----------------
@@ -1657,9 +1657,9 @@
   //#define SD_IGNORE_AT_STARTUP            // Don't mount the SD card when starting up
   //#define SDCARD_READONLY                 // Read-only SD card (to save over 2K of flash)
 
-  //#define GCODE_REPEAT_MARKERS            // Enable G-code M808 to set repeat markers and do looping
+  #define GCODE_REPEAT_MARKERS            // Enable G-code M808 to set repeat markers and do looping
 
-  #define SD_PROCEDURE_DEPTH 1              // Increase if you need more nested M32 calls
+  #define SD_PROCEDURE_DEPTH 2              // Increase if you need more nested M32 calls
 
   #define SD_FINISHED_STEPPERRELEASE true   // Disable steppers when SD Print is finished
   #define SD_FINISHED_RELEASECOMMAND "M84"  // Use "M84XYE" to keep Z enabled so your bed stays in place
@@ -1678,7 +1678,7 @@
   //#define MEDIA_MENU_AT_TOP               // Force the media menu to be listed on the top of the main menu
 
   // G-code to run on SD Abort Print (e.g., "G28XY" or "G27")
-  #define EVENT_GCODE_SD_ABORT "M106 S0\nM104 S0\nM140 S0\nG91\nG1 F1800 E-7\nG0 Z5\nG0 X0 Y180 F1000\nM84"
+  #define EVENT_GCODE_SD_ABORT "G91\nG1 F1800 E-7\nG1 Z5 F300\nM300 P50 S440\nG90\nG1 X0 Y" STRINGIFY(Y_MAX_POS) " F2400\nM84XYE"
 
   #if ENABLED(PRINTER_EVENT_LEDS)
     #define PE_LEDS_COMPLETED_TIME  (30*60) // (seconds) Time to keep the LED "done" color before restoring normal illumination
@@ -2800,7 +2800,7 @@
                                                   //   For direct drive, the full length of the nozzle.
   //#define ADVANCED_PAUSE_CONTINUOUS_PURGE       // Purge continuously up to the purge length until interrupted.
   #define ADVANCED_PAUSE_PURGE_FEEDRATE        3  // (mm/s) Extrude feedrate (after loading). Should be slower than load feedrate.
-  #define ADVANCED_PAUSE_PURGE_LENGTH         50  // (mm) Length to extrude after loading.
+  #define ADVANCED_PAUSE_PURGE_LENGTH        100  // (mm) Length to extrude after loading.
                                                   //   Set to 0 for manual extrusion.
                                                   //   Filament can be extruded repeatedly from the Filament Change menu
                                                   //   until extrusion is consistent, and to purge old filament.
