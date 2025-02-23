@@ -1077,7 +1077,7 @@
 #if ENABLED(ASSISTED_TRAMMING)
 
   // Define from 3 to 9 points to probe.
-  #define TRAMMING_POINT_XY { {  30, 147 }, { 30, 30 }, { 144, 30 }, { 144, 147 } }
+  #define TRAMMING_POINT_XY { {  30, 145 }, { 30, 30 }, { 141, 30 }, { 141, 145 } }
 
   // Define position names for probe points.
   #define TRAMMING_POINT_NAME_1 "Back-Left"
@@ -1169,8 +1169,8 @@
  *  X<1>         Set the given parameters only for the X axis.
  *  Y<1>         Set the given parameters only for the Y axis.
  */
-//#define INPUT_SHAPING_X
-//#define INPUT_SHAPING_Y
+#define INPUT_SHAPING_X
+#define INPUT_SHAPING_Y
 #if EITHER(INPUT_SHAPING_X, INPUT_SHAPING_Y)
   #if ENABLED(INPUT_SHAPING_X)
     #define SHAPING_FREQ_X  40          // (Hz) The default dominant resonant frequency on the X axis.
