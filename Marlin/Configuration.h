@@ -485,6 +485,7 @@
  *    14 : 100kΩ  (R25), 4092K (beta25), 4.7kΩ pull-up, bed thermistor as used in Ender-5 S1
  *    15 : 100kΩ Calibrated for JGAurora A5 hotend
  *    18 : 200kΩ ATC Semitec 204GT-2 Dagoma.Fr - MKS_Base_DKU001327
+ *    19 : 100kΩ TwoTrees 350C, table made from #14, with checks from 190C to 381C by K-type thermocouple
  *    22 : 100kΩ GTM32 Pro vB - hotend - 4.7kΩ pullup to 3.3V and 220Ω to analog input
  *    23 : 100kΩ GTM32 Pro vB - bed - 4.7kΩ pullup to 3.3v and 220Ω to analog input
  *    30 : 100kΩ Kis3d Silicone heating mat 200W/300W with 6mm precision cast plate (EN AW 5083) NTC100K - beta 3950
@@ -559,7 +560,7 @@
  *   998 : Dummy Table that ALWAYS reads 25°C or the temperature defined below.
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  */
-#define TEMP_SENSOR_0 501 // 1,3,17,61 // 14, 501
+#define TEMP_SENSOR_0 19 // 1,3,17,61 // 14, 501, 19
 //#define TEMP_SENSOR_1 0
 //#define TEMP_SENSOR_2 0
 //#define TEMP_SENSOR_3 0
@@ -2353,25 +2354,25 @@
 // Preheat Constants - Up to 10 are supported without changes
 //
 #define PREHEAT_1_LABEL "PLA"
-#define PREHEAT_1_TEMP_HOTEND 210
+#define PREHEAT_1_TEMP_HOTEND 190
 #define PREHEAT_1_TEMP_BED 60
 #define PREHEAT_1_TEMP_CHAMBER 0
 #define PREHEAT_1_FAN_SPEED 0 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL "PETG"
-#define PREHEAT_2_TEMP_HOTEND 230
+#define PREHEAT_2_TEMP_HOTEND 220
 #define PREHEAT_2_TEMP_BED 80
 #define PREHEAT_2_TEMP_CHAMBER 0
 #define PREHEAT_2_FAN_SPEED 0 // Value from 0 to 255
 
 #define PREHEAT_3_LABEL "ABS"
-#define PREHEAT_3_TEMP_HOTEND 260
+#define PREHEAT_3_TEMP_HOTEND 250
 #define PREHEAT_3_TEMP_BED 100
 #define PREHEAT_3_TEMP_CHAMBER 35
 #define PREHEAT_3_FAN_SPEED 0 // Value from 0 to 255
 
 #define PREHEAT_4_LABEL "PA"
-#define PREHEAT_4_TEMP_HOTEND 290
+#define PREHEAT_4_TEMP_HOTEND 280
 #define PREHEAT_4_TEMP_BED 120
 #define PREHEAT_4_TEMP_CHAMBER 55
 #define PREHEAT_4_FAN_SPEED 0 // Value from 0 to 255

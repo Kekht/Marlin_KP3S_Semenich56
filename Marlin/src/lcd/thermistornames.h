@@ -94,10 +94,14 @@
   #define THERMISTOR_NAME "E3104FXT (alt)"
 #elif THERMISTOR_ID == 13
   #define THERMISTOR_NAME "Hisens 3950"
+#elif THERMISTOR_ID == 14
+  #define THERMISTOR_NAME "100kΩ B4092 Ender-5 S1"
 #elif THERMISTOR_ID == 15
   #define THERMISTOR_NAME "100k JGAurora A5"
 #elif THERMISTOR_ID == 18
   #define THERMISTOR_NAME "ATC Semitec 204GT-2"
+#elif THERMISTOR_ID == 19
+  #define THERMISTOR_NAME "100kΩ TwoTrees 350C"
 #elif THERMISTOR_ID == 20
   #define THERMISTOR_NAME "Pt100 UltiMB 5v"
 #elif THERMISTOR_ID == 21
