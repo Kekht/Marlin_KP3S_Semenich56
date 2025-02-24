@@ -2522,7 +2522,7 @@
 #if BOTH(HAS_MEDIA, DIRECT_STEPPING)
   #define BLOCK_BUFFER_SIZE  8
 #elif HAS_MEDIA
-  #define BLOCK_BUFFER_SIZE 32
+  #define BLOCK_BUFFER_SIZE 64
 #else
   #define BLOCK_BUFFER_SIZE 16
 #endif
@@ -2614,7 +2614,7 @@
 #define SERIAL_OVERRUN_PROTECTION
 
 // For serial echo, the number of digits after the decimal point
-//#define SERIAL_FLOAT_PRECISION 4
+#define SERIAL_FLOAT_PRECISION 3
 
 /**
  * Set the number of proportional font spaces required to fill up a typical character space.
@@ -3876,7 +3876,7 @@
 #define GCODE_MACROS
 #if ENABLED(GCODE_MACROS)
   #define GCODE_MACROS_SLOTS       10  // Up to 10 may be used
-  #define GCODE_MACROS_SLOT_SIZE  128  // Maximum length of a single macro
+  #define GCODE_MACROS_SLOT_SIZE  1024  // Maximum length of a single macro
 #endif
 
 /**
