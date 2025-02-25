@@ -24,7 +24,17 @@
 // 100k Zonestar thermistor. Adjusted By Hally
 constexpr temp_entry_t temptable_501[] PROGMEM = {
    { OV(   1), 713 },
-   { OV(  14), 300 }, // Top rating 300C
+   { OV(   8.60), 350 },
+   { OV(   8.85), 345 },
+   { OV(   9.00), 340 },
+   { OV(   9.25), 335 },
+   { OV(   9.50), 330 },
+   { OV(  10.00), 325 },
+   { OV(  10.50), 320 },
+   { OV(  11.25), 315 },
+   { OV(  12), 310 },
+   { OV(  13), 305 },
+   { OV(  14), 300 }, // Top rating 300C, upper added manually
    { OV(  16), 290 },
    { OV(  19), 280 },
    { OV(  23), 270 },
